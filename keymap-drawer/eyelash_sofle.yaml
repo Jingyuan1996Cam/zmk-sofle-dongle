@@ -72,7 +72,7 @@ layers:
   - F3
   - F4
   - F5
-  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
+  - $$mdi:pan-up$$
   - F6
   - F7
   - F8
@@ -85,12 +85,12 @@ layers:
   - $$mdi:mouse-scroll-wheel$$
   - $$mdi:mouse-right-click-outline$$
   - '&mkp MB4'
-  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
+  - $$mdi:pan-down$$
   - PG UP
   - END
   - $$mdi:arrow-up-bold$$
   - HOME
-  - {t: '-', s: _}
+  - P
   - {t: '=', s: +}
   - {t: '$$mdi:transfer$$', type: trans}
   - '~'
