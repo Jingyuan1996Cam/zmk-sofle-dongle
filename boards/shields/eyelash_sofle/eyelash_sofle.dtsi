@@ -28,6 +28,7 @@
 
 	left_encoder: encoder_left {
 		compatible = "alps,ec11";
+		behaviors = <&inc_dec_mouse_scroll>;
 		label = "LEFT_ENCODER";
 		resolution = <4>;
         steps = <40>;
