@@ -60,7 +60,7 @@ layers:
   - layer1
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - BLSH
+  - {t: \, s: '|'}
   - HOME
   - END
   - {t: '-', s: _}
