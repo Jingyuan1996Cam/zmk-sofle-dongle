@@ -11,13 +11,6 @@
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 
 / {
-    sensors {
-        compatible = "zmk,keymap-sensors";
-        sensor-bindings = <&inc_dec_mouse_scroll>;  // Use ZMK's built-in scroll behavior
-    };
-};
-
-/ {
   zip_scroll_scaler: zip_scroll_scaler {
     compatible = "zmk,input-processor-scaler";
     #input-processor-cells = <2>;
@@ -48,12 +41,14 @@
 
 
 / {
-    scroll_encoder: scroll_encoder {
-        compatible = "zmk,behavior-sensor-rotate";
-        #sensor-binding-cells = <0>;
-        bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+    behaviors{
+        scroll_encoder: scroll_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
 
-        tap-ms = <30>;
+            tap-ms = <30>;
+        };
     };
 
     keymap {
@@ -68,7 +63,7 @@
 &mkp MB3    &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &mo 1   &kp SPACE    &kp ENTER        &kp BSLH   &kp HOME   &kp END    &kp MINUS        &kp DELETE
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&inc_dec_mouse_scroll>;
             display-name = "LAYER0";
         };
 
