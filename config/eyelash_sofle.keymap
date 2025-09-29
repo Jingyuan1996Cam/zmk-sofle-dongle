@@ -63,7 +63,7 @@ behaviors{
 &mkp MB3    &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &mo 1   &kp SPACE    &kp ENTER        &kp BSLH   &kp HOME   &kp END    &kp MINUS        &kp DELETE
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&msc SCRL_DOWN SCRL_UP>;
             display-name = "LAYER0";
         };
 
