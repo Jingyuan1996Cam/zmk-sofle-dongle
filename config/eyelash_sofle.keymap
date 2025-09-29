@@ -13,13 +13,9 @@
 / {
     sensors {
         compatible = "zmk,keymap-sensors";
-        sensor0: encoder_one {
-            compatible = "alps,ec11";
-            a-gpios = <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-            b-gpios = <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-            steps = <40>;
-        };
+        sensor-bindings = <&inc_dec_mouse_scroll>;  // Use ZMK's built-in scroll behavior
     };
+};
 
 / {
   zip_scroll_scaler: zip_scroll_scaler {
