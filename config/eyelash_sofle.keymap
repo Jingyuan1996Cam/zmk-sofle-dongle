@@ -11,6 +11,17 @@
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 
 / {
+    sensors {
+        compatible = "zmk,keymap-sensors";
+        sensor0: encoder_one {
+            compatible = "alps,ec11";
+            a-gpios = <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+            b-gpios = <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+            steps = <24>;
+        };
+    };
+
+/ {
   zip_scroll_scaler: zip_scroll_scaler {
     compatible = "zmk,input-processor-scaler";
     #input-processor-cells = <2>;
@@ -63,7 +74,7 @@ behaviors{
 &mkp MB3    &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &mo 1   &kp SPACE    &kp ENTER        &kp BSLH   &kp HOME   &kp END    &kp MINUS        &kp DELETE
             >;
 
-            sensor-bindings = <&msc SCRL_DOWN SCRL_UP>;
+            sensor-bindings = <&scroll_encoder>;
             display-name = "LAYER0";
         };
 
