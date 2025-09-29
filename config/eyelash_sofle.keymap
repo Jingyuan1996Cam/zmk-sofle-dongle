@@ -30,7 +30,7 @@
 
 &msc {
     acceleration-exponent = <0>;      // 0
-    time-to-max-speed-ms = <700>;       // 300
+    time-to-max-speed-ms = <1000>;       // 300
     delay-ms = <0>;                   // 0
 };
 
@@ -73,7 +73,7 @@
 &trans      &kp GRAVE        &mkp LCLK       &mkp MCLK        &mkp RCLK        &mkp MB4           &mmv MOVE_DOWN   &kp PG_UP        &kp HOME         &kp UP      &kp END    &trans            &kp EQUAL
 &trans      &kp TILDE        &trans          &trans           &trans           &mkp MB5           &mmv MOVE_LEFT   &kp PG_DN        &kp LEFT         &kp DOWN    &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
 &trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &trans           &trans           &kp INSERT  &kp F11    &kp F12           &trans
-&kp C_MUTE  &trans           &trans          &trans           &trans           &trans             &mkp LCLK        &trans           &trans           &trans      &trans     &trans
+&kp C_MUTE  &trans           &trans          &trans           &trans           &trans             &mkp LCLK        &kp NON_US_BSLH           &trans           &trans      &trans     &trans
             >;
 
             display-name = "layer1";
