@@ -17,7 +17,7 @@
             compatible = "alps,ec11";
             a-gpios = <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
             b-gpios = <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-            steps = <24>;
+            steps = <40>;
         };
     };
 
@@ -52,7 +52,6 @@
 
 
 / {
-behaviors{
     scroll_encoder: scroll_encoder {
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
@@ -60,7 +59,6 @@ behaviors{
 
         tap-ms = <30>;
     };
-};
 
     keymap {
         compatible = "zmk,keymap";
